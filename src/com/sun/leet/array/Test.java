@@ -1,7 +1,7 @@
 package com.sun.leet.array;
 
 /**
- * @Author: 孙凯
+ * @Author:
  * @Date: 2019/10/18 17:50
  * @Description:
  * @Version 1.0
