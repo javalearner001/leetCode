@@ -1,5 +1,8 @@
 package com.sun.leet.array;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @Author: 孙凯
  * @Date: 2019/10/26 19:02
@@ -9,6 +12,7 @@ package com.sun.leet.array;
 public class Merge {
     public static void main(String[] args) {
         int []nums1 = {4,5,6,7,8,9,11,13};
+
         int []nums2 = {1,3,6,7};
         int []result = merge2(nums1,4,nums2,4);
         for (int i = 0 ;  i<result.length ; i++){
@@ -49,5 +53,22 @@ public class Merge {
         }
         System.arraycopy(nums2,0,nums1,0,p2+1);
         return nums1;
+    }
+
+    public int[] twoSum(int[] numbers, int target) {
+        int []result = new int[2];
+        Map<Integer,Integer> map = new HashMap<>();
+
+        for(int i =0 ; i < numbers.length;i++){
+            if(map.containsKey(numbers[i])){
+                result[0] = map.get(numbers[i]);
+                result[1] = i;
+                return result;
+            }else{
+                int number = target-numbers[i];
+                map.put(number,i);
+            }
+        }
+        return result;
     }
 }

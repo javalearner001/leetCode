@@ -8,8 +8,8 @@ package com.sun.leet.array;
  */
 public class RemoveElement {
     public static void main(String[] args) {
-        int []nums = {0,0,1,1,1,2,2,3,3,4};
-        System.out.println(removeElement(nums,1));
+        int []nums = {0,0,1,1,1,0,1,0,1,1,0};
+        System.out.println(findMaxConsecutiveOnes(nums));
     }
     public static int removeElement(int[] nums, int val) {
         if (nums.length == 0){
@@ -23,5 +23,19 @@ public class RemoveElement {
             }
         }
         return i;
+    }
+
+    public static int findMaxConsecutiveOnes(int[] nums) {
+        int i = 0;
+        int m = 0;
+        for(int j = 0;j < nums.length;j++){
+            if(j == 1 ){
+                i++;
+            }else {
+                m = Math.max(i,m);
+                i = 0;
+            }
+        }
+        return m;
     }
 }
