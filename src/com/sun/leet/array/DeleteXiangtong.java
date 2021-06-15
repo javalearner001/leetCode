@@ -10,7 +10,8 @@ package com.sun.leet.array;
 public class DeleteXiangtong {
     public static void main(String[] args) {
         int []nums = {0,0,1,1,1,2,2,3,3,4};
-        System.out.println(removeDuplicates(nums));
+        removeDuplicates(nums);
+        System.out.println(1);
     }
     public static int removeDuplicates(int[] nums) {
         if (nums.length == 0){
